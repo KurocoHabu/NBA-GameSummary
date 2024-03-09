@@ -1010,7 +1010,7 @@ def main():
 #     else:
 #         date = args.date
     
-    games = pd.read_csv("Data/games2023-2024.csv")
+    games = pd.read_csv("data/games2023-2024.csv")
     
     today = (datetime.today() - timedelta(2)).strftime("%Y-%m-%d")
     
