@@ -104,7 +104,7 @@ def cleanDuplicateValues(df, colName):
 
 
 def _get_games(matchup, date):
-    games = pd.read_csv("Data/games2023-2024.csv")
+    games = pd.read_csv("data/games2023-2024.csv")
     game_df = games[(games["datetime"]==date)&(games["MatchUp"]==matchup)]
     
     if len(games)==0:
@@ -1034,7 +1034,7 @@ def main():
     # for team, tag in teams.items():
     
     
-    # games = pd.read_csv("Data/games2023-2024.csv")
+    # games = pd.read_csv("data/games2023-2024.csv")
     matchup = games[games["datetime"]==date].reset_index(drop=True)
     matchup["Date-MatchUp"] = matchup["datetime"] + " " + matchup["MatchUp"]
     matchup_list = matchup["Date-MatchUp"].tolist()
